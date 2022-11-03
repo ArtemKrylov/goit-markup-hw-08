@@ -1062,6 +1062,10 @@ main {
   .modal__window {
     width: 450px;
     height: 609px;
+    min-width: 450px;
+    max-width: 450px;
+    min-height: 609px;
+    max-height: 609px;
     padding: 40px;
   }
   .filters {
@@ -1166,6 +1170,10 @@ main {
   .modal__window {
     width: 528px;
     height: 581px;
+    min-width: 528px;
+    max-width: 528px;
+    min-height: 581px;
+    max-height: 581px;
   }
   .modal__checkbox-label-text {
     font-size: 14px;
