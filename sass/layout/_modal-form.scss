@@ -98,6 +98,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-bottom: 30px;
 }
 
@@ -134,9 +135,7 @@
 }
 
 .modal__checkbox-label-text {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include text(12px, 14px, 0.03em);
 
   color: #757575;
 }

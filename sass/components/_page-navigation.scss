@@ -1,10 +1,13 @@
 .header__page-navigation {
-  margin-right: auto;
+  flex-grow: 1;
 }
 
 .cite-nav {
   display: flex;
-  column-gap: 50px;
+  flex-direction: column;
+  gap: 30px;
+
+  @include text(40px, 47px, 0.02em);
 }
 
 .cite-nav__link {
@@ -19,21 +22,5 @@
 }
 
 .cite-nav__link--current {
-  position: relative;
-
   color: var(--accent-color);
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -32px;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    border-radius: 2px;
-
-    background-color: var(--accent-color);
-  }
 }

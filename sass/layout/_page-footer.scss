@@ -6,12 +6,15 @@
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+
+  text-align: center;
 }
 
 .footer__logo-and-address {
   flex-grow: 1;
-  margin-right: 70px;
 }
 
 .footer__logo {
@@ -58,10 +61,6 @@
   }
 }
 
-.footer__social {
-  margin-right: 90px;
-}
-
 .footer__social-title {
   margin-bottom: 20px;
 
@@ -86,9 +85,9 @@
 }
 
 .footer__input {
-  width: 358px;
+  display: block;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   padding: 0 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);

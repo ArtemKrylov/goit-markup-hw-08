@@ -1,8 +1,11 @@
 .contacts {
   display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  gap: 32px;
 }
 
-.contact__link {
+.contacts__link {
   display: flex;
   align-items: center;
 
@@ -17,10 +20,15 @@
   }
 }
 
-.contact__text {
-  margin-left: 10px;
+.contacts__link[rel='studio-mail'] {
+  @include text(24px, 28px, 0.02em);
 }
 
-.contact__item:not(:last-of-type) {
-  margin-right: 50px;
+.contacts__link[rel='studio-phone-number'] {
+  @include text(34px, 40px, 0.02em);
+  color: var(--accent-color);
+}
+
+.contacts__icon {
+  display: none;
 }

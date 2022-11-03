@@ -31,43 +31,72 @@
         <a class="logo header__logo" href="./index.html" rel="Студія" lang="en"
           ><span class="logo__accent">Web</span>Studio</a
         >
-        <nav class="page-navigation header__page-navigation">
-          <ul class="cite-nav">
-            <li class="cite-nav__item">
-              <a class="cite-nav__link" href="./index.html" rel="studio">Студія</a>
+        <button type="button" class="header__burger burger js-open-menu">
+          <svg class="burger__icon" width="28" height="14">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu js-menu-container">
+          <button class="mobile-menu__close-button js-close-menu" type="button">
+            <svg class="icon mobile-menu__close-icon" width="18" height="18">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <nav class="page-navigation header__page-navigation">
+            <ul class="cite-nav">
+              <li class="cite-nav__item">
+                <a class="cite-nav__link" href="./index.html" rel="studio">Студія</a>
+              </li>
+              <li class="cite-nav__item">
+                <a
+                  class="cite-nav__link cite-nav__link--current"
+                  href="./portfolio.html"
+                  rel="portfolio"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="cite-nav__item">
+                <a class="cite-nav__link" href="#" rel="contacts">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="contacts">
+            <ul class="contacts__socials social-textlinks mobile-only">
+              <li class="social-textlinks__item">
+                <a href="" class="social-textlinks__link">Instagram</a>
+              </li>
+              <li class="social-textlinks__item">
+                <a href="" class="social-textlinks__link">Twitter</a>
+              </li>
+              <li class="social-textlinks__item">
+                <a href="" class="social-textlinks__link">Facebook</a>
+              </li>
+              <li class="social-textlinks__item">
+                <a href="" class="social-textlinks__link">LinkedIn</a>
+              </li>
+            </ul>
+
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:info@devstudio.com" rel="studio-mail">
+                <svg class="icon contacts__icon" width="16" height="12">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                <span class="contacts__text">info@devstudio.com</span>
+              </a>
             </li>
-            <li class="cite-nav__item">
-              <a
-                class="cite-nav__link cite-nav__link--current"
-                href="./portfolio.html"
-                rel="portfolio"
-                >Портфоліо</a
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+380961111111" rel="studio-phone-number"
+                ><svg class="icon contacts__icon" width="10" height="16">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                <span class="contacts__text">+38 096 111 11 11</span></a
               >
             </li>
-            <li class="cite-nav__item">
-              <a class="cite-nav__link" href="#" rel="contacts">Контакти</a>
-            </li>
           </ul>
-        </nav>
-
-        <ul class="contacts">
-          <li class="contact__item">
-            <a class="contact__link" href="mailto:info@devstudio.com" rel="studio-mail">
-              <svg class="icon icon--envelope" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              <span class="contact__text">info@devstudio.com</span>
-            </a>
-          </li>
-          <li class="contact__item">
-            <a class="contact__link" href="tel:+380961111111" rel="studio-phone-number"
-              ><svg class="icon icon--smartphone" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              <span class="contact__text">+38 096 111 11 11</span></a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -80,33 +109,80 @@
 
           <!-- filter pannel-->
           <ul class="filters">
-            <li class="filters__item">
+            <li class="filters__item all-js">
               <button class="button filters__button" type="button">Усі</button>
             </li>
-            <li class="filters__item">
+            <li class="filters__item cite-js">
               <button class="button filters__button" type="button">Веб-сайти</button>
             </li>
-            <li class="filters__item">
+            <li class="filters__item app-js">
               <button class="button filters__button" type="button">Додатки</button>
             </li>
-            <li class="filters__item">
+            <li class="filters__item design-js">
               <button class="button filters__button" type="button">Дизайн</button>
             </li>
-            <li class="filters__item">
+            <li class="filters__item marketing-js">
               <button class="button filters__button" type="button">Маркетинг</button>
             </li>
           </ul>
 
           <!-- list of studio's projects-->
           <ul class="projects">
-            <li class="projects__item">
+            <li class="projects__item cite-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-technokrjack-min.jpg"
-                  alt="Технокряк"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-desktop-min.webp    1x,
+                      ./images/projects/project-technokrjack@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-desktop-min.jpg    1x,
+                      ./images/projects/project-technokrjack@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-tablet-min.webp    1x,
+                      ./images/projects/project-technokrjack@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-tablet-min.jpg    1x,
+                      ./images/projects/project-technokrjack@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-mobile-min.webp    1x,
+                      ./images/projects/project-technokrjack@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-technokrjack-mobile-min.jpg    1x,
+                      ./images/projects/project-technokrjack@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-technokrjack-mobile-min.jpg"
+                    alt="Технокряк"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Технокряк</h2>
                   <p class="projects__type">Веб-сайт</p>
@@ -119,14 +195,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item design-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-new-orlean-min.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-desktop-min.webp    1x,
+                      ./images/projects/project-new-orlean@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-desktop-min.jpg    1x,
+                      ./images/projects/project-new-orlean@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-tablet-min.webp    1x,
+                      ./images/projects/project-new-orlean@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-tablet-min.jpg    1x,
+                      ./images/projects/project-new-orlean@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-mobile-min.webp    1x,
+                      ./images/projects/project-new-orlean@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-new-orlean-mobile-min.jpg    1x,
+                      ./images/projects/project-new-orlean@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-new-orlean-mobile-min.jpg"
+                    alt="Постер New Orlean vs Golden Star"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title" lang="en">Постер New Orlean vs Golden Star</h2>
                   <p class="projects__type">Дизайн</p>
@@ -139,14 +262,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item app-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-seafood-min.jpg"
-                  alt="Ресторан Seafood"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-desktop-min.webp    1x,
+                      ./images/projects/project-seafood@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-desktop-min.jpg    1x,
+                      ./images/projects/project-seafood@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-tablet-min.webp    1x,
+                      ./images/projects/project-seafood@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-tablet-min.jpg    1x,
+                      ./images/projects/project-seafood@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-mobile-min.webp    1x,
+                      ./images/projects/project-seafood@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-seafood-mobile-min.jpg    1x,
+                      ./images/projects/project-seafood@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-seafood-mobile-min.jpg"
+                    alt="Ресторан Seafood"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Ресторан Seafood</h2>
                   <p class="projects__type">Додаток</p>
@@ -159,14 +329,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item marketing-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-prime-min.jpg"
-                  alt="Проєкт Prime"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-desktop-min.webp    1x,
+                      ./images/projects/project-prime@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-desktop-min.jpg    1x,
+                      ./images/projects/project-prime@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-tablet-min.webp    1x,
+                      ./images/projects/project-prime@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-tablet-min.jpg    1x,
+                      ./images/projects/project-prime@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-mobile-min.webp    1x,
+                      ./images/projects/project-prime@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-prime-mobile-min.jpg    1x,
+                      ./images/projects/project-prime@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-prime-mobile-min.jpg"
+                    alt="Проєкт Prime"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Проєкт Prime</h2>
                   <p class="projects__type">Маркетинг</p>
@@ -179,14 +396,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item app-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-boxes-min.jpg"
-                  alt="Проєкт Boxes"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-desktop-min.webp    1x,
+                      ./images/projects/project-boxes@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-desktop-min.jpg    1x,
+                      ./images/projects/project-boxes@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-tablet-min.webp    1x,
+                      ./images/projects/project-boxes@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-tablet-min.jpg    1x,
+                      ./images/projects/project-boxes@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-mobile-min.webp    1x,
+                      ./images/projects/project-boxes@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-boxes-mobile-min.jpg    1x,
+                      ./images/projects/project-boxes@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-boxes-mobile-min.jpg"
+                    alt="Проєкт Boxes"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Проєкт Boxes</h2>
                   <p class="projects__type">Додаток</p>
@@ -199,14 +463,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item cite-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-inspiration-min.jpg"
-                  alt="Inspiration has no Borders"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-desktop-min.webp    1x,
+                      ./images/projects/project-inspiration@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-desktop-min.jpg    1x,
+                      ./images/projects/project-inspiration@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-tablet-min.webp    1x,
+                      ./images/projects/project-inspiration@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-tablet-min.jpg    1x,
+                      ./images/projects/project-inspiration@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-mobile-min.webp    1x,
+                      ./images/projects/project-inspiration@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-inspiration-mobile-min.jpg    1x,
+                      ./images/projects/project-inspiration@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-inspiration-mobile-min.jpg"
+                    alt="Inspiration has no Borders"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title" lang="en">Inspiration has no Borders</h2>
                   <p class="projects__type">Веб-сайт</p>
@@ -219,14 +530,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item design-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-limited-edition-min.jpg"
-                  alt="Видання Limited Edition"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-desktop-min.webp    1x,
+                      ./images/projects/project-limited-edition@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-desktop-min.jpg    1x,
+                      ./images/projects/project-limited-edition@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-tablet-min.webp    1x,
+                      ./images/projects/project-limited-edition@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-tablet-min.jpg    1x,
+                      ./images/projects/project-limited-edition@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-mobile-min.webp    1x,
+                      ./images/projects/project-limited-edition@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-limited-edition-mobile-min.jpg    1x,
+                      ./images/projects/project-limited-edition@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-limited-edition-mobile-min.jpg"
+                    alt="Видання Limited Edition"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Видання Limited Edition</h2>
                   <p class="projects__type">Дизайн</p>
@@ -239,14 +597,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item marketing-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-lab-min.jpg"
-                  alt="Проєкт LAB"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-desktop-min.webp    1x,
+                      ./images/projects/project-lab@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-desktop-min.jpg    1x,
+                      ./images/projects/project-lab@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-tablet-min.webp    1x,
+                      ./images/projects/project-lab@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-tablet-min.jpg    1x,
+                      ./images/projects/project-lab@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-mobile-min.webp    1x,
+                      ./images/projects/project-lab@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-lab-mobile-min.jpg    1x,
+                      ./images/projects/project-lab@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-lab-mobile-min.jpg"
+                    alt="Проєкт LAB"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title">Проєкт LAB</h2>
                   <p class="projects__type">Маркетинг</p>
@@ -259,14 +664,61 @@
               </a>
             </li>
 
-            <li class="projects__item">
+            <li class="projects__item app-js">
               <a href="#" class="projects__link">
-                <img
-                  class="projects__image"
-                  src="./images/projects/project-business-min.jpg"
-                  alt="Growing Business Додаток"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/projects/project-business-desktop-min.webp    1x,
+                      ./images/projects/project-business@2x-desktop-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-business-desktop-min.jpg    1x,
+                      ./images/projects/project-business@2x-desktop-min.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-business-tablet-min.webp    1x,
+                      ./images/projects/project-business@2x-tablet-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-business-tablet-min.jpg    1x,
+                      ./images/projects/project-business@2x-tablet-min.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-business-mobile-min.webp    1x,
+                      ./images/projects/project-business@2x-mobile-min.webp 2x
+                    "
+                    type="image/webp"
+                    media="(max-width: 767px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/projects/project-business-mobile-min.jpg    1x,
+                      ./images/projects/project-business@2x-mobile-min.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    class="projects__image"
+                    src="./images/projects/project-business-mobile-min.jpg"
+                    alt="Growing Business Додаток"
+                  />
+                </picture>
+
                 <div class="projects__info">
                   <h2 class="projects__title" lang="en">Growing Business</h2>
                   <p class="projects__type">Додаток</p>
@@ -394,5 +846,7 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/project-filter.js"></script>
   </body>
 </html>

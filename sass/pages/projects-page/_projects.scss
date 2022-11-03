@@ -1,12 +1,12 @@
 .projects {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
 }
 
-.project {
-  flex-basis: 370px;
-  max-width: 370px;
+.projects__item {
+  flex-basis: 100%;
+  max-width: 450px;
 }
 
 .projects__link {
@@ -55,8 +55,7 @@
 }
 
 .projects__image {
-  display: block;
-  max-width: 370px;
+  width: 100%;
 }
 
 .projects__info {

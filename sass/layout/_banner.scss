@@ -1,17 +1,25 @@
 .banner {
   margin: 0 auto;
-  padding: 200px 0;
-  max-width: 1600px;
-  height: 600px;
+  width: 100vw;
+  min-width: 280px;
+  height: 400px;
 
   color: var(--banner-text-color);
   background-color: var(--accent-background-color);
-  background-image: var(--banner-overlay), url('../images/banner/banner-background-image-min.jpg');
+  background-image: var(--banner-overlay),
+    url('../images/banner/banner-background-image-min-mobile.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   text-align: center;
+}
+
+.banner__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner__title {

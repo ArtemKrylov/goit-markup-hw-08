@@ -1,18 +1,9 @@
-.peculiarities {
-  display: flex;
-  gap: 30px;
-}
-
-.peculiarities__item {
-  flex-grow: 1;
-}
-
 .peculiarities__thumb {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  width: 270px;
+  width: 100%;
   height: 120px;
   /*padding: 25px 100px;*/
 
@@ -33,5 +24,6 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
   color: var(--title-text-color);
 }

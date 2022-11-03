@@ -1,5 +1,5 @@
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .section--no-padding-top {
@@ -10,13 +10,23 @@
   background-color: var(--team-section-background-color);
 }
 
+@media screen and (max-width: 1119px) {
+  .section--only-desktop {
+    display: none;
+  }
+}
+
 .section__title {
   margin-bottom: 50px;
 
   font-weight: 700;
-  font-size: 36px;
-  letter-spacing: 0.03em;
-  line-height: 1.17;
+  @include text(28px, 33px, 0.03em);
   text-align: center;
   color: var(--title-text-color);
+}
+
+@media screen and (max-width: 1199px) {
+  .section--only-desktop {
+    display: none;
+  }
 }
