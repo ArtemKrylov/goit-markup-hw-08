@@ -20,11 +20,11 @@
   }
 }
 
-.contacts__link[rel='studio-mail'] {
+.contacts__link--mail {
   @include text(24px, 28px, 0.02em);
 }
 
-.contacts__link[rel='studio-phone-number'] {
+.contacts__link--phone {
   @include text(34px, 40px, 0.02em);
   color: var(--accent-color);
 }

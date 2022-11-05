@@ -3,11 +3,13 @@
     width: 1200px;
   }
 
-  .section {
+  .section:not(.section--no-padding-top) {
     padding: 94px 0;
   }
 
   .section__title {
+    margin-bottom: 50px;
+
     @include text(36px, 42px, 0.03em);
   }
 
@@ -44,8 +46,7 @@
     gap: 30px;
   }
 
-  .contacts__link[rel='studio-mail'],
-  .contacts__link[rel='studio-phone-number'] {
+  .contacts__link {
     @include text-inherit;
   }
 
@@ -79,7 +80,6 @@
   //footer
   .footer__container {
     flex-wrap: nowrap;
-    align-items: baseline;
     text-align: start;
     gap: 0;
   }
@@ -118,6 +118,12 @@
 
   .modal__checkbox-label-text {
     @include text(14px, 24px, 0.03em);
+  }
+
+  //**********Portfolio page**************
+  //filters
+  .filters {
+    margin-bottom: 50px;
   }
 
   //projects

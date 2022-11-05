@@ -11,8 +11,11 @@
 
 .projects__link {
   position: relative;
-  display: block;
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -59,8 +62,9 @@
 }
 
 .projects__info {
-  position: relative;
-  z-index: 2;
+  flex-grow: 1;
+  z-index: 2; //впливає на вигляд висування оверлею - перекриває його над інфо при анімації висування
+
   padding: 20px 24px;
 
   background-color: #fff;

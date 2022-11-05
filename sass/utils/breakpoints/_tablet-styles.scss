@@ -1,5 +1,6 @@
 @media screen and (min-width: 768px) {
   .container {
+    min-width: 768px;
     width: 768px;
   }
 
@@ -91,18 +92,12 @@
     margin-right: 8px;
   }
 
-  .contacts__link[rel='studio-mail'],
-  .contacts__link[rel='studio-phone-number'] {
+  .contacts__link {
     @include text(12px, 14px, 0.02em);
   }
 
-  .contacts__link[rel='studio-phone-number'] {
+  .contacts__link--phone {
     color: inherit;
-  }
-
-  //banner
-  .banner {
-    width: 768px;
   }
 
   //peculiarities section
@@ -124,9 +119,8 @@
   .footer__container {
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;
-    column-gap: 70px;
-    row-gap: 60px;
+    align-items: baseline;
+    justify-content: space-around;
 
     text-align: center;
   }
@@ -135,10 +129,6 @@
     flex-grow: 1;
 
     text-align: center;
-  }
-
-  .footer__form {
-    width: 100%;
   }
 
   .footer__input {
@@ -163,6 +153,9 @@
   .filters {
     justify-content: center;
     flex-wrap: nowrap;
+    gap: 8px;
+
+    margin-bottom: 30px;
   }
 
   //projects
